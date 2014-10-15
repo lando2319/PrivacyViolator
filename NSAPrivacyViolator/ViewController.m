@@ -34,4 +34,27 @@
 }
 
 
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    for (CLLocation *location in locations) {
+        if (location.verticalAccuracy < 1000 && location.horizontalAccuracy > 1000) {
+            self.myTextView.text = @"Location Found. Reverse Geocoding...";
+            [self reverseGeocoding:location];
+            NSLog(@"%@", location);
+            [self.myLocationManager startUpdatingLocation];
+            break;
+        }
+    }
+}
+
+- (void)reverseGeocoding:(CLLocation *)location{
+
+}
+
+
+
+
+
+
+
+
 @end
