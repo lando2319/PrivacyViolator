@@ -36,21 +36,33 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     for (CLLocation *location in locations) {
-        if (location.verticalAccuracy < 1000 && location.horizontalAccuracy > 1000) {
+        if (location.verticalAccuracy < 1000 && location.horizontalAccuracy < 1000) {
             self.myTextView.text = @"Location Found. Reverse Geocoding...";
             [self reverseGeocoding:location];
             NSLog(@"%@", location);
-            [self.myLocationManager startUpdatingLocation];
+            [self.myLocationManager stopUpdatingLocation];
             break;
         }
     }
 }
 
 - (void)reverseGeocoding:(CLLocation *)location{
+    CLGeocoder *geocoder = [CLGeocoder new];
 
+    [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error) {
+        CLPlacemark *placemark = placemarks.firstObject;
+        NSString *address = [NSString stringWithFormat:@"%@ %@ \n%@",
+                             placemark.subThoroughfare,
+                             placemark.thoroughfare,
+                             placemark.locality];
+        self.myTextView.text = [NSString stringWithFormat:@"Found you: %@", address];
+        [self findJaiNear:placemark.location];
+    }];
 }
 
+- (void)findJaiNear:(CLLocation *)location{
 
+}
 
 
 
