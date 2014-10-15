@@ -15,6 +15,7 @@
 		CC58B0CB19EED3010033D5D8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC58B0CA19EED3010033D5D8 /* Images.xcassets */; };
 		CC58B0CE19EED3010033D5D8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC58B0CC19EED3010033D5D8 /* LaunchScreen.xib */; };
 		CC58B0DA19EED3020033D5D8 /* NSAPrivacyViolatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC58B0D919EED3020033D5D8 /* NSAPrivacyViolatorTests.m */; };
+		CC58B0E419EEEB370033D5D8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC58B0E319EEEB370033D5D8 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		CC58B0D319EED3020033D5D8 /* NSAPrivacyViolatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSAPrivacyViolatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC58B0D819EED3020033D5D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC58B0D919EED3020033D5D8 /* NSAPrivacyViolatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSAPrivacyViolatorTests.m; sourceTree = "<group>"; };
+		CC58B0E319EEEB370033D5D8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC58B0E419EEEB370033D5D8 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +68,7 @@
 		CC58B0AE19EED3010033D5D8 = {
 			isa = PBXGroup;
 			children = (
+				CC58B0E319EEEB370033D5D8 /* MapKit.framework */,
 				CC58B0B919EED3010033D5D8 /* NSAPrivacyViolator */,
 				CC58B0D619EED3020033D5D8 /* NSAPrivacyViolatorTests */,
 				CC58B0B819EED3010033D5D8 /* Products */,
