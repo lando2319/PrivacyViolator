@@ -13,6 +13,9 @@
 @end
 
 @implementation ViewController
+- (IBAction)startViolatingPrivacy:(id)sender {
+    NSLog(@"toast");
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
